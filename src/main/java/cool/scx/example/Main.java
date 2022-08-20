@@ -1,4 +1,4 @@
-package org.example;
+package cool.scx.example;
 
 import cool.scx.config.ScxEnvironment;
 import io.vertx.core.Vertx;
