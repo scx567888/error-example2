@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>cool.scx</groupId>
+        <artifactId>scx-parent</artifactId>
+        <version>9</version>
+    </parent>
+
+    <artifactId>error-example2</artifactId>
+    <version>0.0.1</version>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web</artifactId>
+            <version>4.3.3</version>
+        </dependency>
+
+        <!-- just some utils -->
+        <dependency>
+            <groupId>cool.scx</groupId>
+            <artifactId>scx-config</artifactId>
+            <version>0.0.5</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

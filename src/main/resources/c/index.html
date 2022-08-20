@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="upload1" type="file">
+<button onclick="doUpload()">Upload</button>
+<script>
+    const upload1 = document.querySelector("#upload1");
+
+    function doUpload() {
+
+        /**
+         * @type {File}
+         */
+        const fileData = upload1.files[0];
+        if (!fileData) {
+            alert("Please Select File");
+            return;
+        }
+
+        var fileName = fileData.name;
+        var fileSize = fileData.size;
+
+        // Example MD5
+        var md5 = "908ed92175ce3c62e37c004422dcda09";
+
+        const uploadFormData = new FormData();
+        uploadFormData.append('fileName', fileName);
+        uploadFormData.append('fileData', fileData);
+        uploadFormData.append('fileSize', fileSize + '');
+        uploadFormData.append('fileMD5', md5);
+        uploadFormData.append('chunkLength', 1+'');
+        uploadFormData.append('nowChunkIndex', 0+ '');
+
+        const init = {
+            method: "POST",
+            headers: new Headers(),
+            credentials: 'include',
+            body: uploadFormData
+        };
+
+        fetch("/upload", init).then(res => {
+            console.log(res);
+        }).catch(e => {
+            console.error(e);
+        });
+
+    }
+</script>
+</body>
+</html>
