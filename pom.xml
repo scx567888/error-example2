@@ -6,8 +6,8 @@
 
     <parent>
         <groupId>cool.scx</groupId>
-        <artifactId>scx-parent</artifactId>
-        <version>13</version>
+        <artifactId>scx-oss-parent</artifactId>
+        <version>2</version>
     </parent>
 
     <artifactId>error-example2</artifactId>
